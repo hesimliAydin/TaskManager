@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Task_Manager.Domain.ViewModels;
+using Task_Manager.Domain.Views;
 
 namespace Task_Manager
 {
@@ -23,6 +25,13 @@ namespace Task_Manager
         public MainWindow()
         {
             InitializeComponent();
+
+            App.MyGrid = MyGrid;
+            var taskManagerView = new TaskManagerUC();
+            var taskManagerViewModel = new TaskManagerUCViewModel();
+            taskManagerView.DataContext= taskManagerViewModel;
+            App.MyGrid.Children.Add(taskManagerView);
+
         }
     }
 }

@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:Task_Manager"
              StartupUri="/Domain/Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Domain/Dictonaries/Styles.xaml" x:Name="Dictionary"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

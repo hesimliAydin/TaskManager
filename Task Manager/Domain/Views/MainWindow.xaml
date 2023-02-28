@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TaskManager" Height="450" Width="800">
     <Grid x:Name="MyGrid">
         
     </Grid>

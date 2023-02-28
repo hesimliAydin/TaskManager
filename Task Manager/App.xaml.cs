@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Task_Manager
 {
@@ -13,5 +14,6 @@ namespace Task_Manager
     /// </summary>
     public partial class App : Application
     {
+        public static Grid MyGrid { get; set; }
     }
 }
