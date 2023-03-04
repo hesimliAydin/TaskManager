@@ -101,6 +101,17 @@ namespace Task_Manager.Domain.ViewModels
                 App.Current.MainWindow.Close();
             });
 
+
+            AddProcessToBlackBoxCommand = new RelayCommand((c) =>
+            {
+                string UserAnswer = Microsoft.VisualBasic.Interaction.InputBox("Enter the name");
+                if (UserAnswer.Trim()!=string.Empty) 
+                { 
+                    BlackBoxProcesses.Add(UserAnswer.Replace(".exe",""));
+                    MessageBox.Show($"{UserAnswer} was added.");
+                }
+            });
+
             
         }
 
